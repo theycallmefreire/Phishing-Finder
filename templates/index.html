@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Fishing Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header-container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+         <h1><b>Fishing Finder</b></h1>
+    </header>
+   
+    <p>Verifique se uma URL está na lista global de phishing.</p>
+    
+    <form method="POST">
+        <input type="text" name="url" placeholder="Cole a URL aqui..." required>
+        <br>
+        <button type="submit">Verificar URL</button>
+    </form>
+
+    {% if resultado %}
+        <div class="alerta {{ 'perigo' if resultado.Fishing_Finder else 'seguro' }}">
+            {% if resultado.Fishing_Finder %}
+                <strong>⚠️ SITE MALICIOSO DETECTADO!</strong>
+                <BR></BR>
+                Status: {{ 'Ativo e perigoso' if resultado['online'] == 'yes' else 'Provavelmente fora do ar' }}
+            {% else %}
+                <strong>✅ LIMPO:</strong> A URL <code>{{ url }}</code> não foi encontrada na base ativa.
+            {% endif %}
+        </div>
+
+        {% if resultado.whois %}
+        <div class="info-whois" style="text-align: left; margin-top: 20px; padding: 15px; border: 1px solid #ccc;">
+            <h3 align="center">Detalhes do Domínio</h3>
+            <p><strong>Registrador:</strong> {{ resultado.whois.registrador }}</p>
+            <p><strong>Data de Criação:</strong> {{ resultado.whois.criacao }}</p>
+            <p><strong>País:</strong> {{ resultado.whois.pais }}</p>
+            <small>* Domínios muito recentes (menos de 6 meses) são suspeitos.</small>
+        </div>
+        {% endif %}
+    {% endif %}
+
+    <footer>
+    <div class="footer-content">
+        <p> Desenvolvido por Guilherme Freire</p>
+        <div class="social-links">
+            <a href="https://github.com/theycallmefreire" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/guilherme-barbosa-freire-silva/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

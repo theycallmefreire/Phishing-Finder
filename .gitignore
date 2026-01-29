@@ -1,0 +1,13 @@
+# Ambientes Virtuais
+.venv/
+venv/
+ENV/
+
+# Cache do Python
+__pycache__/
+*.py[cod]
+
+# Dados e Configurações de IDE
+.vscode/
+.idea/
+data/verified_online.csv  # Recomendado: Bases de dados grandes geralmente não vão pro Git
