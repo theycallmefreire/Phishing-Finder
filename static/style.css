@@ -3,7 +3,9 @@ body {
     max-width: 800px; 
     margin: 50px auto; 
     text-align: center; 
-    background-color: aliceblue;
+    background: linear-gradient(to bottom, #026491, #000b18);
+    background-attachment: fixed; 
+    color: white; 
 }
 .header-container {
     display: flex;
@@ -34,7 +36,7 @@ button {
 }
 .perigo {
     background-color: #ffcccc; 
-    color: #cc0000; 
+    color: #e70202; 
     border: 1px solid #cc0000; 
 }
 .seguro { 
@@ -58,7 +60,7 @@ footer {
 
 .social-links a {
     font-size: 24px;
-    color: #333;
+    color: #9a9a9a;
     margin: 0 15px;
     transition: color 0.3s ease;
 }
