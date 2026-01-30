@@ -14,7 +14,8 @@
 O **Phishing Finder** é uma ferramenta de segurança defensiva projetada para identificar e analisar URLs maliciosas em tempo real. O projeto combina a base de dados global colaborativa do **PhishTank** com o enriquecimento de dados via **WHOIS**, fornecendo uma visão técnica sobre a infraestrutura de ataques de phishing.
 
 <div align="center">
-  <img width="1562" height="755" alt="1" src="https://github.com/user-attachments/assets/426f5c0e-82d4-40b5-9b3d-28badf279c4d" />
+  <img width="1408" height="616" alt="image" src="https://github.com/user-attachments/assets/adf63501-99ef-4eee-ab56-d4f6c5285937" />
+
 </div>
 
 
