@@ -16,7 +16,7 @@ def procurar_url(caminho_arquivo, url_para_buscar):
         if dominio:
             w = whois.whois(dominio)
             dados_whois = {
-                "criacao": w.creation_date,
+                "criacao": str(w.creation_date),
                 "expiracao": w.expiration_date,
                 "registrador": w.registrar,
                 "pais": w.country

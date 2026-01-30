@@ -10,4 +10,4 @@ __pycache__/
 # Dados e Configurações de IDE
 .vscode/
 .idea/
-data/verified_online.csv 
+#data/verified_online.csv 
