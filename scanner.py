@@ -24,4 +24,4 @@ def procurar_url(caminho_arquivo, url_para_buscar):
     except Exception as e:
         print(f"Erro ao buscar WHOIS: {e}")
 
-    return {"Fishing_Finder": dados_phish, "whois": dados_whois}
+    return {"Phishing_Finder": dados_phish, "whois": dados_whois}

@@ -10,4 +10,4 @@ __pycache__/
 # Dados e Configurações de IDE
 .vscode/
 .idea/
-data/verified_online.csv  # Recomendado: Bases de dados grandes geralmente não vão pro Git
+data/verified_online.csv 

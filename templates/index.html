@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Fishing Finder</title>
+    <title>Phishing Finder</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='logo.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -10,7 +10,7 @@
 <body>
     <header class="header-container">
         <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
-         <h1><b>Fishing Finder</b></h1>
+         <h1><b>Phishing Finder</b></h1>
     </header>
    
     <p>Verifique se uma URL está na lista global de phishing.</p>
@@ -22,8 +22,8 @@
     </form>
 
     {% if resultado %}
-        <div class="alerta {{ 'perigo' if resultado.Fishing_Finder else 'seguro' }}">
-            {% if resultado.Fishing_Finder %}
+        <div class="alerta {{ 'perigo' if resultado.Phishing_Finder else 'seguro' }}">
+            {% if resultado.Phishing_Finder %}
                 <strong>⚠️ SITE MALICIOSO DETECTADO!</strong>
                 <BR></BR>
                 Status: {{ 'Ativo e perigoso' if resultado['online'] == 'yes' else 'Provavelmente fora do ar' }}
